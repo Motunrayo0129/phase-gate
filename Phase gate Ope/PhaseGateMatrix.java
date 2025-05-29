@@ -7,7 +7,7 @@ public class PhaseGateMatrix {
 
 	for(int rows = nums.length - 1; rows >= 0; rows--){ 
 		value = nums[rows].length - 1;
-		for(int col = 0; col < nums[0].length - 1; col++) {
+		for(int col = 0; col < nums[0].length; col++) {
 		arrays[anticlock][col] = nums[value][anticlock];
 			value--;
 		}
