@@ -3,37 +3,38 @@ public class RandomPhaseGate {
 public static void main(String[] args) {
 	Scanner input = new Scanner(System.in);
 
-	int counter = 0;
-	int score = 0;
-	int attempt = 0;
+		int temp = 0;
+		int score = 0;
+long startTime = System.currentTimeMillis();
+	for(int count = 1; count <= 10; count++)  { 
+	int randomNumber1 = (int)(Math.random() * 20) + 1;
+	int randomNumber2 = (int)(Math.random() * 20) + 1;
+		if (randomNumber1 < randomNumber2)
+			randomNumber2 = randomNumber1;
+			temp = randomNumber2;
 	
-	while(counter <= 10) {
-	int computerChoice1 = (int)(Math.random() * 9) + 1;
-	int computerChoice2 = (int)(Math.random() * 9) + 1;
-
-	int correctAnswer = computerChoice1 - computerChoice2;
-for (int count = 1; count < 2; count++) {
-	if(computerChoice1 > computerChoice2) {
-	System.out.println("Substract " + computerChoice1 + " - " + computerChoice2);
-		int userAnswer = input.nextInt();
-		if(userAnswer == correctAnswer && counter == 10) {
+		int correctAnswer = randomNumber1 - randomNumber2;
+		for(int num = 1; num <= 2; num++) {
+	System.out.println("Substract " + randomNumber1 + " - " + randomNumber2);
+		System.out.println("Enter your answer: ");
+		int answer = input.nextInt();
+		if(answer == correctAnswer)  {
 			score++;
-			attempt++;
 			break;
-					
-}	
-		else if(userAnswer != correctAnswer && userAnswer == 2) {
-			attempt++;
-			break;
+			}
 
+		else if (num == 1){
+			System.out.print("Last attempt for this question: ");
+				
+		}	
+		 
+    }
+}
+	long endTime = System.currentTimeMillis(); 
+    long timeTaken = (endTime - startTime) / 1000; 
 
-		}
-
-
-	}
-   } 
-            }
-System.out.println(score);
+    System.out.println("You took " + timeTaken + " seconds to answer this question.");	
+System.out.println("Your score is " + score);
 
 
 }
