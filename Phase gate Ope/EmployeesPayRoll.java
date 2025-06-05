@@ -106,7 +106,8 @@ ______________________________________________
 	
 	System.out.print("Goodbye!.");
 
-	}
+	} 
+		break;
 	default:  {
 	System.out.println("Invalid input");
 		} 
