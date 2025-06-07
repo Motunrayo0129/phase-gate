@@ -25,26 +25,26 @@ ______________________________________________
 		 questions[9] = "How to declare class name in java";
 
 	System.out.print("Enter a number from 1 to 10:");
-			 
+		boolean[] questionAnswered = new boolean[questions.length];	 
 		Scanner input = new Scanner(System.in);
 		int score = 0;
-		int[] userInput = new int[10];
+		int count = 0;
 	for(int index = 0; index < questions.length; index++)  {
-		//for(int count = 0; count < userInput.length; count++)
 			boolean answer = true;
 			while (answer == true) {
 		System.out.print("Enter number: ");
 		int choice = input.nextInt();
-			if(index == choice) {
+		if(questionAnswered[choice - 1]) {
+			System.out.println("Question selected. Pick another question.");
 			}
-		//if(index)
-			
+			questionAnswered[choice - 1] = true;
+			System.out.println(questionAnswered[choice - 1]);
 			switch(choice) {
 				case 1: {
 		System.out.println(questions[0]);
 			String option = """
 		___________________________________________________
-				OPTIONS
+	 			OPTIONS
 		___________________________________________________
 			(A). ABUJA               (B). SHOMOLU
 			(C). IKEJA		 (D). IKORODU
@@ -368,13 +368,14 @@ ______________________________________________
 				}
 					break;
 
-			} break;
+	} break;
 
-			} // for loop
+		} // for loop
 
-	} //switch
+			} //switch
+				
 
-System.out.println("Your scores is " + score);
+System.out.println("Your final scores is " + score);
 
 
 }//static void
