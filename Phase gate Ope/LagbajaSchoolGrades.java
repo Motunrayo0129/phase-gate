@@ -126,7 +126,7 @@ System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         System.out.println("Worst Graduating Student: Student " + (worstStudent + 1) + " scoring " + totalScores[worstStudent]);
 
 System.out.println();
-System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-        System.out.println("===========================================================");
+System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+ System.out.println();       System.out.println("===========================================================");
     }
 }
