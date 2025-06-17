@@ -47,3 +47,22 @@ al.remove(0);
 
     }
         }
+public double transfer(String fromName, int pin, String toName, double amount) {
+    Account from = findAccountByFullName(fromName);
+    Account to = findAccountByFullName(toName);
+    if (from != null && to != null && from.verifyPin(pin) && from.getBalance() >= amount) {
+        from.withdraw(amount);
+        to.deposit(amount);
+        return amount;
+    }
+    return 0;
+}
+
+public double withdraw(String fullName, double amount, int enteredPin) {
+    Account acc = findAccountByFullName(fullName);
+    if (acc != null && acc.verifyPin(enteredPin)) {
+        boolean success = acc.withdraw(amount);
+        return success ? amount : 0;
+    }
+    return 0;
+}

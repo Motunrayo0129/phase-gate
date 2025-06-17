@@ -25,7 +25,7 @@ public String getPhoneNumber() {
 }
 
 public void setFirstName(String name) {
-    this.firstName = name;
+    this.first Name = name;
 }
 
 public void setLastName(String name) {

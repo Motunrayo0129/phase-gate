@@ -1,11 +1,19 @@
+import java.util.Scanner;
 public class CreditCardNumber {
 	public static void main(String[] args) {
 
-int[] cardNumbers = {4,5,3,9,1,4,8,8,0,3,4,3,6,4,6,7}; 
+	Scanner input = new Scanner(System.in);
+System.out.print("Enter card number: ");
+	String cardNum = input.next();
 
-System.out.println(CreditCardValidator.validateCard(cardNumbers));
+int[] card = new int[cardNum.length()];
+for (int num = 0; num < cardNum.length(); num++) {
+	card[num]  = Character.getNumericValue(cardNum.charAt(num));
 
-System.out.println(CreditCardValidator.applyLuhnAlgorithm(cardNumbers));
+	}
+System.out.println(CreditCardValidator.validateCard(card));
+
+System.out.println(CreditCardValidator.applyLuhnAlgorithm(card));
 
 
 

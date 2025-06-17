@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 	public class AfeezContactMain  {
    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner input = ne,w Scanner(System.in);
         boolean running = true;
 
 String option = """
